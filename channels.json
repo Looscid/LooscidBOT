@@ -1,0 +1,243 @@
+{
+  "_about": "Channel names (labels) for each language in the Looscid Discord. LooscidBOT finds each language's channels by these names, so no channel ids are stored. 'categories' are the category names to look in, in order. If a channel is renamed on Discord, rename it here too.",
+  "languages": {
+    "English": {
+      "categories": [
+        "English",
+        "Community",
+        "Info"
+      ],
+      "channels": {
+        "rules": "rules",
+        "announcements": "announcements",
+        "changelog": "changelog",
+        "general": "general",
+        "help": "help",
+        "introductions": "introductions",
+        "showcase": "showcase",
+        "off_topic": "off-topic",
+        "feedback": "feedback",
+        "accessibility": "accessibility",
+        "testing": "testing",
+        "mods": "mods",
+        "voice": "general voice"
+      }
+    },
+    "Español": {
+      "categories": [
+        "Español"
+      ],
+      "channels": {
+        "voice": "voz general",
+        "rules": "reglas",
+        "announcements": "anuncios",
+        "changelog": "registro-de-cambios",
+        "general": "general",
+        "help": "ayuda",
+        "introductions": "presentaciones",
+        "showcase": "escaparate",
+        "off_topic": "fuera-de-tema",
+        "testing": "pruebas",
+        "mods": "moderadores"
+      }
+    },
+    "Français": {
+      "categories": [
+        "Français"
+      ],
+      "channels": {
+        "voice": "vocal général",
+        "rules": "règles",
+        "announcements": "annonces",
+        "changelog": "journal-des-changements",
+        "general": "général",
+        "help": "aide",
+        "introductions": "présentations",
+        "showcase": "vitrine",
+        "off_topic": "hors-sujet",
+        "testing": "tests",
+        "mods": "modérateurs"
+      }
+    },
+    "Deutsch": {
+      "categories": [
+        "Deutsch"
+      ],
+      "channels": {
+        "voice": "sprachkanal",
+        "rules": "regeln",
+        "announcements": "ankündigungen",
+        "changelog": "änderungsprotokoll",
+        "general": "allgemein",
+        "help": "hilfe",
+        "introductions": "vorstellungen",
+        "showcase": "schaufenster",
+        "off_topic": "off-topic",
+        "testing": "testen",
+        "mods": "moderatoren"
+      }
+    },
+    "Português": {
+      "categories": [
+        "Português"
+      ],
+      "channels": {
+        "voice": "voz geral",
+        "rules": "regras",
+        "announcements": "anúncios",
+        "changelog": "registro-de-alterações",
+        "general": "geral",
+        "help": "ajuda",
+        "introductions": "apresentações",
+        "showcase": "vitrine",
+        "off_topic": "fora-do-tópico",
+        "testing": "testes",
+        "mods": "moderadores"
+      }
+    },
+    "العربية": {
+      "categories": [
+        "العربية"
+      ],
+      "channels": {
+        "voice": "الصوت العام",
+        "rules": "القواعد",
+        "announcements": "الإعلانات",
+        "changelog": "سجل-التغييرات",
+        "general": "عام",
+        "help": "مساعدة",
+        "introductions": "التعارف",
+        "showcase": "معرض-الأعمال",
+        "off_topic": "مواضيع-أخرى",
+        "testing": "الاختبار",
+        "mods": "المشرفون"
+      }
+    },
+    "日本語": {
+      "categories": [
+        "日本語"
+      ],
+      "channels": {
+        "voice": "ボイス",
+        "rules": "ルール",
+        "announcements": "お知らせ",
+        "changelog": "更新履歴",
+        "general": "一般",
+        "help": "ヘルプ",
+        "introductions": "自己紹介",
+        "showcase": "作品紹介",
+        "off_topic": "雑談",
+        "testing": "テスト",
+        "mods": "モデレーター"
+      }
+    },
+    "한국어": {
+      "categories": [
+        "한국어"
+      ],
+      "channels": {
+        "voice": "일반 음성",
+        "rules": "규칙",
+        "announcements": "공지",
+        "changelog": "업데이트-내역",
+        "general": "일반",
+        "help": "도움말",
+        "introductions": "자기소개",
+        "showcase": "작품-자랑",
+        "off_topic": "잡담",
+        "testing": "테스트",
+        "mods": "운영진"
+      }
+    },
+    "中文": {
+      "categories": [
+        "中文"
+      ],
+      "channels": {
+        "voice": "语音频道",
+        "rules": "规则",
+        "announcements": "公告",
+        "changelog": "更新日志",
+        "general": "综合",
+        "help": "帮助",
+        "introductions": "自我介绍",
+        "showcase": "作品展示",
+        "off_topic": "闲聊",
+        "testing": "测试",
+        "mods": "管理员"
+      }
+    },
+    "हिंदी": {
+      "categories": [
+        "हिंदी"
+      ],
+      "channels": {
+        "voice": "वॉइस चैट",
+        "rules": "नियम",
+        "announcements": "घोषणाएँ",
+        "changelog": "चेंजलॉग",
+        "general": "सामान्य",
+        "help": "मदद",
+        "introductions": "परिचय",
+        "showcase": "शोकेस",
+        "off_topic": "अन्य-बातें",
+        "testing": "टेस्टिंग",
+        "mods": "मॉडरेटर"
+      }
+    },
+    "Русский": {
+      "categories": [
+        "Русский"
+      ],
+      "channels": {
+        "voice": "голосовой",
+        "rules": "правила",
+        "announcements": "объявления",
+        "changelog": "список-изменений",
+        "general": "общий",
+        "help": "помощь",
+        "introductions": "знакомство",
+        "showcase": "витрина",
+        "off_topic": "оффтоп",
+        "testing": "тестирование",
+        "mods": "модераторы"
+      }
+    },
+    "Türkçe": {
+      "categories": [
+        "Türkçe"
+      ],
+      "channels": {
+        "voice": "genel sesli",
+        "rules": "kurallar",
+        "announcements": "duyurular",
+        "changelog": "değişiklikler",
+        "general": "genel",
+        "help": "yardım",
+        "introductions": "tanışma",
+        "showcase": "vitrin",
+        "off_topic": "konu-dışı",
+        "testing": "test",
+        "mods": "moderatörler"
+      }
+    },
+    "Italiano": {
+      "categories": [
+        "Italiano"
+      ],
+      "channels": {
+        "voice": "vocale generale",
+        "rules": "regole",
+        "announcements": "annunci",
+        "changelog": "registro-modifiche",
+        "general": "generale",
+        "help": "aiuto",
+        "introductions": "presentazioni",
+        "showcase": "vetrina",
+        "off_topic": "off-topic",
+        "testing": "test",
+        "mods": "moderatori"
+      }
+    }
+  }
+}
