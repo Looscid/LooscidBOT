@@ -1,6 +1,14 @@
 name: Holiday posts
 
 on:
+  push:
+    branches: [DEV]
+    paths:
+      - "bot.py"
+      - "holidays_rules.py"
+      - "channels.json"
+      - "requirements.txt"
+      - ".github/workflows/holidays.yml"
   schedule:
     - cron: "0 12 * * *"
   workflow_dispatch:
@@ -41,7 +49,7 @@ jobs:
       - name: Celebrate today's holidays
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          DRY_RUN: ${{ (github.event_name == 'schedule' && 'false') || (github.event_name == 'workflow_dispatch' && !inputs.dry_run && 'false') || 'true' }}
           PRETEND_DATE: ${{ inputs.date }}
         run: python -W ignore bot.py
 

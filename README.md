@@ -177,6 +177,8 @@ No dates are typed in by hand for a particular year. Each holiday is a rule, so 
 
 ## Running it yourself
 
+Every change to the code also runs a dry run automatically, so you can check the results in the Actions tab before the next real post.
+
 Run the workflow by hand from the Actions tab: choose "Holiday posts", then "Run workflow". "Dry run" is on by default: the bot then only prints which channels it found, what it would post today, and every holiday in the next 60 days. It posts nothing and leaves no servers. You can also type a date to see what the bot would post on that day.
 
 To run it on your own computer:
