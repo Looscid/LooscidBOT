@@ -7,6 +7,8 @@ on:
       - "bot.py"
       - "holidays_rules.py"
       - "channels.json"
+      - "faiths.json"
+      - "faith_holidays.py"
       - "requirements.txt"
       - ".github/workflows/holidays.yml"
   schedule:

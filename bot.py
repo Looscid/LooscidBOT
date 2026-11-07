@@ -1,5 +1,6 @@
 """LooscidBOT holidays: posts a short celebration in each language's own channels
-on that language's holidays. Runs once a day from GitHub Actions.
+on that language's holidays, and faith holidays in each faith channel (no pings).
+Runs once a day from GitHub Actions.
 
 Settings come from environment variables:
 - DISCORD_TOKEN: the bot token (a GitHub Actions secret, never in the code).
@@ -17,6 +18,7 @@ from datetime import date, datetime, timezone
 import requests
 
 from holidays_rules import HOLIDAYS, holidays_on, upcoming
+from faith_holidays import FAITHS, faith_holidays_on, faith_upcoming, message as faith_message
 
 # LooscidBOT is private to the Looscid server. The code is public, the bot is not.
 LOOSCID_GUILD_ID = "1500332794327466076"
@@ -110,6 +112,19 @@ def find_channels(channels):
                         if match:
                             result[kind] = match[0]
         found[language] = result
+    return found
+
+
+def find_faith_channels(channels):
+    """{(faith, language): channel} for every faith channel, found by name inside its language category."""
+    categories = [c for c in channels if c["type"] == CATEGORY]
+    found = {}
+    for language, info in FAITHS["languages"].items():
+        cats = [c for c in categories if norm(c["name"]) == norm(info["category"])]
+        inside = [c for c in channels if c["type"] == TEXT and any(c.get("parent_id") == cat["id"] for cat in cats)]
+        for faith, name in info["channels"].items():
+            match = [c for c in inside if norm(c["name"]) == norm(name)]
+            found[(faith, language)] = match[0] if match else None
     return found
 
 
@@ -217,6 +232,45 @@ def main():
     print("\nNext 60 days:")
     for d, language, name in upcoming(today, 60):
         print(f"- {d.isoformat()} {d.strftime('%A')}: {language}, {name}")
+
+    # 5. Faith holidays: only in that faith's own channel in each language, never a ping.
+    #    (These channels are only visible to people who picked that language AND that faith.)
+    faith_found = find_faith_channels(channels) if api else {}
+    if api:
+        have = sum(1 for c in faith_found.values() if c)
+        cant = sum(1 for c in faith_found.values() if c and not can_post(effective_permissions(c, roles, my_roles, my_id, guild)))
+        print(f"\nFaith channels found: {have} of {len(faith_found)}. Bot cannot post in: {cant}.")
+        for key, c in faith_found.items():
+            if c is None:
+                print(f"- NOT FOUND: {key[0]} channel in {key[1]}")
+    todays_faith = faith_holidays_on(today)
+    print(f"\nFaith holidays today ({today}):" + ("" if todays_faith else " none."))
+    for faith, items in todays_faith.items():
+        print(f"- {faith}: " + ", ".join(h["names"]["English"] for h in items))
+        for language in FAITHS["languages"]:
+            text = "\n".join(faith_message(language, h) for h in items)
+            c = faith_found.get((faith, language))
+            if not api:
+                print(f"  {language}: {text}")
+                continue
+            if c is None:
+                print(f"  {language}: no channel found, skipped.")
+                continue
+            if c.get("guild_id", LOOSCID_GUILD_ID) != LOOSCID_GUILD_ID:
+                print(f"  Refusing #{c['name']}: not in Looscid.")
+                continue
+            if dry_run:
+                print(f"  Would post in #{c['name']} ({language}): {text}")
+                continue
+            if already_posted_today(api, c["id"], my_id, text, today):
+                print(f"  Already posted in #{c['name']} today, skipped.")
+                continue
+            r = api.call("POST", f"/channels/{c['id']}/messages", json={"content": text, "allowed_mentions": {"parse": []}})
+            print(f"  Posted in #{c['name']} ({language}): {r.status_code}{'' if r.ok else ' ' + r.text[:200]}")
+
+    print("\nFaith holidays, next 60 days (each goes to that faith's channel in all 13 languages):")
+    for d, faith, name in faith_upcoming(today, 60):
+        print(f"- {d.isoformat()} {d.strftime('%A')}: {faith}, {name}")
     return 0
 
 

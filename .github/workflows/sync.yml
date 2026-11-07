@@ -1,0 +1,45 @@
+name: Faith channel role sync
+
+on:
+  push:
+    branches: [DEV]
+    paths:
+      - "sync.py"
+      - "faiths.json"
+      - ".github/workflows/sync.yml"
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: only show what would change"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install libraries
+        run: pip install requests==2.34.2
+
+      - name: Sync combined roles
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          DRY_RUN: ${{ (github.event_name == 'schedule' && 'false') || (github.event_name == 'workflow_dispatch' && !inputs.dry_run && 'false') || 'true' }}
+        run: python sync.py

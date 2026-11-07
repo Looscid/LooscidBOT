@@ -29,8 +29,12 @@ If you want a bot like this for your own server, you are welcome to copy the cod
 - bot.py: finds the channels and posts the messages.
 - channels.json: the names of every language's channels, like rules, announcements, general and voice, in that language.
 - holidays_rules.py: every language's holidays, how each date is worked out, and the messages.
+- faiths.json: the faith channels: which faiths, every language's channel names, the faith holiday names and messages.
+- faith_holidays.py: how each faith holiday date is worked out.
+- sync.py: keeps the "faith · language" roles in step (see Faith channels).
 - requirements.txt: the Python libraries used.
 - .github/workflows/holidays.yml: the daily schedule.
+- .github/workflows/sync.yml: the role sync, every 15 minutes.
 
 ## How dates are worked out
 
@@ -174,6 +178,46 @@ No dates are typed in by hand for a particular year. Each holiday is a rule, so 
 - Republic Day: “Buona Festa della Repubblica! 🇮🇹”
 - Ferragosto: “Buon Ferragosto! ☀️ Godetevi la giornata!”
 - Christmas: “Buon Natale, Looscid! 🎄 Tanti auguri di cuore a tutti.”
+
+## Faith channels
+
+Every language also has one channel per faith, for example #muslim-community in English and #comunidad-musulmana in Español. Only people who picked BOTH that language and that faith can see it, plus that language's mods. Faith holidays are posted there, in that language, with no pings. Nobody gets a holiday they didn't pick.
+
+### How people join or leave
+
+- When joining the server there is an optional question: "Do you celebrate any of these?" Pick as many as you like, or none.
+- To change it later: tap the server name, then Channels & Roles, and change your answers. Your channels show up or disappear within about 15 minutes.
+- Nobody else can see what you picked.
+
+### Why there is a sync job
+
+Discord permissions add up: a channel can be opened to the English role OR the Muslim role, but not to "English AND Muslim". So each faith channel is opened to one combined role, like "Muslim · English", and sync.py gives that role to everyone who has both the language role and the faith role, and takes it away from anyone who no longer has both.
+
+- It runs on GitHub Actions every 15 minutes, and can be started by hand (dry run by default).
+- It only ever adds or removes the combined roles listed in faiths.json. It never touches any other role.
+- It only works in the Looscid server.
+- Its logs show counts only, never member names.
+- If one run would make more than 400 changes, it stops and changes nothing, because that means something is wrong.
+
+### Which faiths, and why
+
+The list comes from Pew Research Center's global religious composition report (June 2025, data for 2020): Christians 28.8% of the world, Muslims 25.6%, Hindus 14.9%, Buddhists 4.1%, Jews about 0.2% (14.8 million). Pew groups Sikhs with "other religions"; Pew's earlier report quotes about 25 million Sikhs worldwide. The rule used: at least about 10 million people and its own holiday calendar. Smaller faiths (Daoist, Baha'i, Shinto, Jain) can be added later the same way. 24.2% of the world has no religion; there is no channel for that because there are no holidays to post, and everyone already sees the normal channels.
+
+- Source: https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/
+- Sikh number: https://www.pewresearch.org/religion/2012/12/18/global-religious-landscape-other/
+
+### Faith holidays
+
+Each one goes to that faith's channel in all 13 languages. The language general chats keep their own holidays as listed above.
+
+- Christian: Christmas, Orthodox Christmas, Easter, Orthodox Easter (only when it is on a different day).
+- Muslim: start of Ramadan, Eid al-Fitr, Eid al-Adha, Islamic New Year. Moon sighting can move these by a day.
+- Hindu: Maha Shivaratri, Holi, Raksha Bandhan, Janmashtami, Ganesh Chaturthi, Dussehra, Diwali.
+- Buddhist: Magha Puja, Vesak, Asalha Puja (Dharma Day). Some countries mark Vesak on a different day.
+- Jewish: Purim, first day of Passover, Shavuot, Rosh Hashanah, Sukkot, first day of Hanukkah. Jewish holidays begin at sundown the evening before.
+- Sikh: Guru Gobind Singh Gurpurab, Vaisakhi, Bandi Chhor Divas, Guru Nanak Gurpurab.
+
+Dates come from libraries: hijridate for Islamic dates, dateutil for Easter, and the holidays library's India, Israel, Singapore and Thailand calendars for the rest.
 
 ## Running it yourself
 

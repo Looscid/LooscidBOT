@@ -1,0 +1,729 @@
+{
+  "_about": "Faith channels for Looscid. Faith list based on Pew Research global religious composition (2025 report, 2020 data); see README. Each language gets one channel per faith, visible only to people with BOTH that language role and that faith role (the sync job gives the combined role).",
+  "faiths": [
+    "Christian",
+    "Muslim",
+    "Hindu",
+    "Buddhist",
+    "Jewish",
+    "Sikh"
+  ],
+  "combined_role": "{faith} · {language}",
+  "languages": {
+    "English": {
+      "role": "English (Standard)",
+      "category": "English",
+      "channels": {
+        "Christian": "christian-community",
+        "Muslim": "muslim-community",
+        "Hindu": "hindu-community",
+        "Buddhist": "buddhist-community",
+        "Jewish": "jewish-community",
+        "Sikh": "sikh-community"
+      },
+      "message": "{e} Today is {n}! Wishing a happy, peaceful day to everyone celebrating."
+    },
+    "Español": {
+      "role": "Español",
+      "category": "Español",
+      "channels": {
+        "Christian": "comunidad-cristiana",
+        "Muslim": "comunidad-musulmana",
+        "Hindu": "comunidad-hindú",
+        "Buddhist": "comunidad-budista",
+        "Jewish": "comunidad-judía",
+        "Sikh": "comunidad-sij"
+      },
+      "message": "{e} ¡Hoy es {n}! Les deseamos un día feliz y lleno de paz a todos los que lo celebran."
+    },
+    "Français": {
+      "role": "Français",
+      "category": "Français",
+      "channels": {
+        "Christian": "communauté-chrétienne",
+        "Muslim": "communauté-musulmane",
+        "Hindu": "communauté-hindoue",
+        "Buddhist": "communauté-bouddhiste",
+        "Jewish": "communauté-juive",
+        "Sikh": "communauté-sikhe"
+      },
+      "message": "{e} Aujourd’hui, c’est {n} ! Belle et paisible journée à toutes celles et ceux qui fêtent ce jour."
+    },
+    "Deutsch": {
+      "role": "Deutsch",
+      "category": "Deutsch",
+      "channels": {
+        "Christian": "christliche-gemeinschaft",
+        "Muslim": "muslimische-gemeinschaft",
+        "Hindu": "hinduistische-gemeinschaft",
+        "Buddhist": "buddhistische-gemeinschaft",
+        "Jewish": "jüdische-gemeinschaft",
+        "Sikh": "sikh-gemeinschaft"
+      },
+      "message": "{e} Heute ist {n}! Allen, die feiern, einen frohen und friedlichen Tag."
+    },
+    "Português": {
+      "role": "Português",
+      "category": "Português",
+      "channels": {
+        "Christian": "comunidade-cristã",
+        "Muslim": "comunidade-muçulmana",
+        "Hindu": "comunidade-hindu",
+        "Buddhist": "comunidade-budista",
+        "Jewish": "comunidade-judaica",
+        "Sikh": "comunidade-sikh"
+      },
+      "message": "{e} Hoje é {n}! Desejamos um dia feliz e cheio de paz a todos que celebram."
+    },
+    "العربية": {
+      "role": "العربية",
+      "category": "العربية",
+      "channels": {
+        "Christian": "مجتمع-المسيحيين",
+        "Muslim": "مجتمع-المسلمين",
+        "Hindu": "مجتمع-الهندوس",
+        "Buddhist": "مجتمع-البوذيين",
+        "Jewish": "مجتمع-اليهود",
+        "Sikh": "مجتمع-السيخ"
+      },
+      "message": "{e} اليوم {n}! نتمنى يوماً سعيداً ومليئاً بالسلام لكل من يحتفل."
+    },
+    "日本語": {
+      "role": "日本語",
+      "category": "日本語",
+      "channels": {
+        "Christian": "キリスト教コミュニティ",
+        "Muslim": "イスラム教コミュニティ",
+        "Hindu": "ヒンドゥー教コミュニティ",
+        "Buddhist": "仏教コミュニティ",
+        "Jewish": "ユダヤ教コミュニティ",
+        "Sikh": "シク教コミュニティ"
+      },
+      "message": "{e} 今日は{n}です！お祝いするみなさん、楽しく穏やかな一日を。"
+    },
+    "한국어": {
+      "role": "한국어",
+      "category": "한국어",
+      "channels": {
+        "Christian": "기독교-커뮤니티",
+        "Muslim": "이슬람-커뮤니티",
+        "Hindu": "힌두교-커뮤니티",
+        "Buddhist": "불교-커뮤니티",
+        "Jewish": "유대교-커뮤니티",
+        "Sikh": "시크교-커뮤니티"
+      },
+      "message": "{e} 오늘은 {n}입니다! 기념하시는 모든 분들, 행복하고 평화로운 하루 보내세요."
+    },
+    "中文": {
+      "role": "中文",
+      "category": "中文",
+      "channels": {
+        "Christian": "基督教社区",
+        "Muslim": "穆斯林社区",
+        "Hindu": "印度教社区",
+        "Buddhist": "佛教社区",
+        "Jewish": "犹太社区",
+        "Sikh": "锡克教社区"
+      },
+      "message": "{e} 今天是{n}！祝所有庆祝的朋友节日快乐、平安喜乐。"
+    },
+    "हिंदी": {
+      "role": "हिंदी",
+      "category": "हिंदी",
+      "channels": {
+        "Christian": "ईसाई-समुदाय",
+        "Muslim": "मुस्लिम-समुदाय",
+        "Hindu": "हिंदू-समुदाय",
+        "Buddhist": "बौद्ध-समुदाय",
+        "Jewish": "यहूदी-समुदाय",
+        "Sikh": "सिख-समुदाय"
+      },
+      "message": "{e} आज {n} है! इसे मनाने वाले सभी लोगों को खुशियों और शांति भरे दिन की शुभकामनाएँ।"
+    },
+    "Русский": {
+      "role": "Русский",
+      "category": "Русский",
+      "channels": {
+        "Christian": "христианское-сообщество",
+        "Muslim": "мусульманское-сообщество",
+        "Hindu": "индуистское-сообщество",
+        "Buddhist": "буддийское-сообщество",
+        "Jewish": "еврейское-сообщество",
+        "Sikh": "сикхское-сообщество"
+      },
+      "message": "{e} Сегодня {n}! Всем, кто празднует, желаем радостного и мирного дня."
+    },
+    "Türkçe": {
+      "role": "Türkçe",
+      "category": "Türkçe",
+      "channels": {
+        "Christian": "hristiyan-topluluğu",
+        "Muslim": "müslüman-topluluğu",
+        "Hindu": "hindu-topluluğu",
+        "Buddhist": "budist-topluluğu",
+        "Jewish": "yahudi-topluluğu",
+        "Sikh": "sih-topluluğu"
+      },
+      "message": "{e} Bugün {n}! Kutlayan herkese mutlu ve huzurlu bir gün dileriz."
+    },
+    "Italiano": {
+      "role": "Italiano",
+      "category": "Italiano",
+      "channels": {
+        "Christian": "comunità-cristiana",
+        "Muslim": "comunità-musulmana",
+        "Hindu": "comunità-induista",
+        "Buddhist": "comunità-buddista",
+        "Jewish": "comunità-ebraica",
+        "Sikh": "comunità-sikh"
+      },
+      "message": "{e} Oggi è {n}! Auguri di una giornata felice e serena a chi festeggia."
+    }
+  },
+  "holidays": {
+    "Christian": [
+      {
+        "key": "christmas",
+        "emoji": "🎄",
+        "names": {
+          "English": "Christmas",
+          "Español": "Navidad",
+          "Français": "Noël",
+          "Deutsch": "Weihnachten",
+          "Português": "Natal",
+          "العربية": "عيد الميلاد",
+          "日本語": "クリスマス",
+          "한국어": "크리스마스",
+          "中文": "圣诞节",
+          "हिंदी": "क्रिसमस",
+          "Русский": "Рождество",
+          "Türkçe": "Noel",
+          "Italiano": "Natale"
+        }
+      },
+      {
+        "key": "orthodox_christmas",
+        "emoji": "✨",
+        "names": {
+          "English": "Orthodox Christmas",
+          "Español": "la Navidad ortodoxa",
+          "Français": "le Noël orthodoxe",
+          "Deutsch": "das orthodoxe Weihnachtsfest",
+          "Português": "o Natal ortodoxo",
+          "العربية": "عيد الميلاد الأرثوذكسي",
+          "日本語": "正教会のクリスマス",
+          "한국어": "정교회 성탄절",
+          "中文": "东正教圣诞节",
+          "हिंदी": "ऑर्थोडॉक्स क्रिसमस",
+          "Русский": "Православное Рождество",
+          "Türkçe": "Ortodoks Noeli",
+          "Italiano": "il Natale ortodosso"
+        }
+      },
+      {
+        "key": "easter",
+        "emoji": "🌷",
+        "names": {
+          "English": "Easter",
+          "Español": "Pascua",
+          "Français": "Pâques",
+          "Deutsch": "Ostern",
+          "Português": "Páscoa",
+          "العربية": "عيد الفصح",
+          "日本語": "イースター（復活祭）",
+          "한국어": "부활절",
+          "中文": "复活节",
+          "हिंदी": "ईस्टर",
+          "Русский": "Пасха",
+          "Türkçe": "Paskalya",
+          "Italiano": "Pasqua"
+        }
+      },
+      {
+        "key": "orthodox_easter",
+        "emoji": "🌷",
+        "names": {
+          "English": "Orthodox Easter",
+          "Español": "la Pascua ortodoxa",
+          "Français": "la Pâque orthodoxe",
+          "Deutsch": "das orthodoxe Osterfest",
+          "Português": "a Páscoa ortodoxa",
+          "العربية": "عيد الفصح الأرثوذكسي",
+          "日本語": "正教会の復活祭",
+          "한국어": "정교회 부활절",
+          "中文": "东正教复活节",
+          "हिंदी": "ऑर्थोडॉक्स ईस्टर",
+          "Русский": "Православная Пасха",
+          "Türkçe": "Ortodoks Paskalyası",
+          "Italiano": "la Pasqua ortodossa"
+        }
+      }
+    ],
+    "Muslim": [
+      {
+        "key": "ramadan_start",
+        "emoji": "🌙",
+        "names": {
+          "English": "the start of Ramadan",
+          "Español": "el inicio del Ramadán",
+          "Français": "le début du ramadan",
+          "Deutsch": "der Beginn des Ramadan",
+          "Português": "o início do Ramadã",
+          "العربية": "بداية شهر رمضان",
+          "日本語": "ラマダンの始まり",
+          "한국어": "라마단의 시작",
+          "中文": "斋月的第一天",
+          "हिंदी": "रमज़ान की शुरुआत",
+          "Русский": "начало Рамадана",
+          "Türkçe": "Ramazan'ın ilk günü",
+          "Italiano": "l'inizio del Ramadan"
+        }
+      },
+      {
+        "key": "eid_al_fitr",
+        "emoji": "🎉",
+        "names": {
+          "English": "Eid al-Fitr",
+          "Español": "Eid al-Fitr",
+          "Français": "l’Aïd el-Fitr",
+          "Deutsch": "Eid al-Fitr (Zuckerfest)",
+          "Português": "o Eid al-Fitr",
+          "العربية": "عيد الفطر",
+          "日本語": "イード・アル＝フィトル（断食明けの祭り）",
+          "한국어": "이드 알피트르",
+          "中文": "开斋节",
+          "हिंदी": "ईद-उल-फ़ित्र",
+          "Русский": "Ураза-байрам",
+          "Türkçe": "Ramazan Bayramı",
+          "Italiano": "l'Eid al-Fitr"
+        }
+      },
+      {
+        "key": "eid_al_adha",
+        "emoji": "✨",
+        "names": {
+          "English": "Eid al-Adha",
+          "Español": "Eid al-Adha",
+          "Français": "l’Aïd el-Kébir (Aïd al-Adha)",
+          "Deutsch": "Eid al-Adha (Opferfest)",
+          "Português": "o Eid al-Adha",
+          "العربية": "عيد الأضحى",
+          "日本語": "イード・アル＝アドハー（犠牲祭）",
+          "한국어": "이드 알아드하",
+          "中文": "古尔邦节（宰牲节）",
+          "हिंदी": "ईद-उल-अज़हा (बकरीद)",
+          "Русский": "Курбан-байрам",
+          "Türkçe": "Kurban Bayramı",
+          "Italiano": "l'Eid al-Adha"
+        }
+      },
+      {
+        "key": "islamic_new_year",
+        "emoji": "🌙",
+        "names": {
+          "English": "the Islamic New Year",
+          "Español": "el Año Nuevo islámico",
+          "Français": "le Nouvel An islamique",
+          "Deutsch": "das islamische Neujahr",
+          "Português": "o Ano Novo islâmico",
+          "العربية": "رأس السنة الهجرية",
+          "日本語": "イスラム暦の新年",
+          "한국어": "이슬람력 새해",
+          "中文": "伊斯兰新年",
+          "हिंदी": "इस्लामी नव वर्ष",
+          "Русский": "Исламский Новый год",
+          "Türkçe": "Hicri Yılbaşı",
+          "Italiano": "il Capodanno islamico"
+        }
+      }
+    ],
+    "Hindu": [
+      {
+        "key": "maha_shivaratri",
+        "emoji": "🔱",
+        "names": {
+          "English": "Maha Shivaratri",
+          "Español": "Maha Shivaratri",
+          "Français": "Maha Shivaratri",
+          "Deutsch": "Maha Shivaratri",
+          "Português": "Maha Shivaratri",
+          "العربية": "ماها شيفاراتري",
+          "日本語": "マハー・シヴァラートリ",
+          "한국어": "마하 시바라트리",
+          "中文": "湿婆神之夜（Maha Shivaratri）",
+          "हिंदी": "महाशिवरात्रि",
+          "Русский": "Маха-Шиваратри",
+          "Türkçe": "Maha Shivaratri",
+          "Italiano": "Maha Shivaratri"
+        }
+      },
+      {
+        "key": "holi",
+        "emoji": "🎨",
+        "names": {
+          "English": "Holi",
+          "Español": "Holi",
+          "Français": "Holi",
+          "Deutsch": "Holi",
+          "Português": "Holi",
+          "العربية": "عيد هولي",
+          "日本語": "ホーリー祭",
+          "한국어": "홀리 축제",
+          "中文": "洒红节（胡里节）",
+          "हिंदी": "होली",
+          "Русский": "Холи",
+          "Türkçe": "Holi",
+          "Italiano": "Holi"
+        }
+      },
+      {
+        "key": "raksha_bandhan",
+        "emoji": "🎀",
+        "names": {
+          "English": "Raksha Bandhan",
+          "Español": "Raksha Bandhan",
+          "Français": "Raksha Bandhan",
+          "Deutsch": "Raksha Bandhan",
+          "Português": "Raksha Bandhan",
+          "العربية": "راكشا باندهان",
+          "日本語": "ラクシャ・バンダン",
+          "한국어": "락샤 반단",
+          "中文": "拉克沙班丹节（兄妹节）",
+          "हिंदी": "रक्षाबंधन",
+          "Русский": "Ракша-бандхан",
+          "Türkçe": "Raksha Bandhan",
+          "Italiano": "Raksha Bandhan"
+        }
+      },
+      {
+        "key": "janmashtami",
+        "emoji": "🦚",
+        "names": {
+          "English": "Janmashtami",
+          "Español": "Janmashtami",
+          "Français": "Janmashtami",
+          "Deutsch": "Janmashtami",
+          "Português": "Janmashtami",
+          "العربية": "جانماشتامي",
+          "日本語": "ジャンマシュタミ（クリシュナ生誕祭）",
+          "한국어": "잔마슈타미",
+          "中文": "黑天诞辰节（Janmashtami）",
+          "हिंदी": "जन्माष्टमी",
+          "Русский": "Джанмаштами",
+          "Türkçe": "Janmashtami",
+          "Italiano": "Janmashtami"
+        }
+      },
+      {
+        "key": "ganesh_chaturthi",
+        "emoji": "🐘",
+        "names": {
+          "English": "Ganesh Chaturthi",
+          "Español": "Ganesh Chaturthi",
+          "Français": "Ganesh Chaturthi",
+          "Deutsch": "Ganesh Chaturthi",
+          "Português": "Ganesh Chaturthi",
+          "العربية": "غانيش تشاتورثي",
+          "日本語": "ガネーシャ・チャトゥルティ",
+          "한국어": "가네샤 차투르티",
+          "中文": "象神节（Ganesh Chaturthi）",
+          "हिंदी": "गणेश चतुर्थी",
+          "Русский": "Ганеша-чатуртхи",
+          "Türkçe": "Ganesh Chaturthi",
+          "Italiano": "Ganesh Chaturthi"
+        }
+      },
+      {
+        "key": "dussehra",
+        "emoji": "🏹",
+        "names": {
+          "English": "Dussehra",
+          "Español": "Dussehra",
+          "Français": "Dussehra",
+          "Deutsch": "Dussehra",
+          "Português": "Dussehra",
+          "العربية": "دوسهرا",
+          "日本語": "ダシャラー祭",
+          "한국어": "두세라",
+          "中文": "十胜节（Dussehra）",
+          "हिंदी": "दशहरा",
+          "Русский": "Дуссехра",
+          "Türkçe": "Dussehra",
+          "Italiano": "Dussehra"
+        }
+      },
+      {
+        "key": "diwali",
+        "emoji": "🪔",
+        "names": {
+          "English": "Diwali",
+          "Español": "Diwali",
+          "Français": "Diwali",
+          "Deutsch": "Diwali",
+          "Português": "Diwali",
+          "العربية": "ديوالي (عيد الأنوار)",
+          "日本語": "ディーワーリー",
+          "한국어": "디왈리",
+          "中文": "排灯节（Diwali）",
+          "हिंदी": "दीपावली",
+          "Русский": "Дивали",
+          "Türkçe": "Diwali",
+          "Italiano": "Diwali"
+        }
+      }
+    ],
+    "Buddhist": [
+      {
+        "key": "magha_puja",
+        "emoji": "🪷",
+        "names": {
+          "English": "Magha Puja",
+          "Español": "Magha Puja",
+          "Français": "Magha Puja",
+          "Deutsch": "Magha Puja",
+          "Português": "Magha Puja",
+          "العربية": "ماغا بوجا",
+          "日本語": "マーカ・ブーチャー",
+          "한국어": "마카 부차",
+          "中文": "万佛节（Magha Puja）",
+          "हिंदी": "माघ पूजा",
+          "Русский": "Магха-пуджа",
+          "Türkçe": "Magha Puja",
+          "Italiano": "Magha Puja"
+        }
+      },
+      {
+        "key": "vesak",
+        "emoji": "🪷",
+        "names": {
+          "English": "Vesak",
+          "Español": "Vesak",
+          "Français": "Vesak",
+          "Deutsch": "Vesakh",
+          "Português": "Vesak",
+          "العربية": "عيد فيساك",
+          "日本語": "ウェーサーカ祭（ヴェサク）",
+          "한국어": "베삭",
+          "中文": "卫塞节",
+          "हिंदी": "वेसाक (बुद्ध पूर्णिमा)",
+          "Русский": "Весак",
+          "Türkçe": "Vesak",
+          "Italiano": "Vesak"
+        }
+      },
+      {
+        "key": "asalha_puja",
+        "emoji": "☸️",
+        "names": {
+          "English": "Asalha Puja (Dharma Day)",
+          "Español": "Asalha Puja",
+          "Français": "Asalha Puja",
+          "Deutsch": "Asalha Puja",
+          "Português": "Asalha Puja",
+          "العربية": "أسالها بوجا",
+          "日本語": "アーサーンハ・ブーチャー",
+          "한국어": "아살하 부차",
+          "中文": "三宝节（Asalha Puja）",
+          "हिंदी": "आषाढ़ पूजा (धर्म दिवस)",
+          "Русский": "Асалха-пуджа",
+          "Türkçe": "Asalha Puja",
+          "Italiano": "Asalha Puja"
+        }
+      }
+    ],
+    "Jewish": [
+      {
+        "key": "purim",
+        "emoji": "🎭",
+        "names": {
+          "English": "Purim",
+          "Español": "Purim",
+          "Français": "Pourim",
+          "Deutsch": "Purim",
+          "Português": "Purim",
+          "العربية": "عيد المساخر (بوريم)",
+          "日本語": "プーリーム",
+          "한국어": "부림절",
+          "中文": "普珥节",
+          "हिंदी": "पूरिम",
+          "Русский": "Пурим",
+          "Türkçe": "Purim",
+          "Italiano": "Purim"
+        }
+      },
+      {
+        "key": "passover",
+        "emoji": "🍷",
+        "names": {
+          "English": "the first day of Passover",
+          "Español": "el primer día de Pésaj",
+          "Français": "le premier jour de Pessa’h",
+          "Deutsch": "der erste Tag von Pessach",
+          "Português": "o primeiro dia do Pessach",
+          "العربية": "أول أيام عيد الفصح اليهودي",
+          "日本語": "過越祭（ペサハ）の初日",
+          "한국어": "유월절 첫날",
+          "中文": "逾越节第一天",
+          "हिंदी": "पासओवर का पहला दिन",
+          "Русский": "первый день Песаха",
+          "Türkçe": "Hamursuz Bayramı'nın ilk günü",
+          "Italiano": "il primo giorno di Pesach"
+        }
+      },
+      {
+        "key": "shavuot",
+        "emoji": "🌾",
+        "names": {
+          "English": "Shavuot",
+          "Español": "Shavuot",
+          "Français": "Chavouot",
+          "Deutsch": "Schawuot",
+          "Português": "Shavuot",
+          "العربية": "عيد الأسابيع (شافوعوت)",
+          "日本語": "シャブオット（七週祭）",
+          "한국어": "칠칠절",
+          "中文": "七七节（五旬节）",
+          "हिंदी": "शावुओत",
+          "Русский": "Шавуот",
+          "Türkçe": "Şavuot",
+          "Italiano": "Shavuot"
+        }
+      },
+      {
+        "key": "rosh_hashanah",
+        "emoji": "🍎",
+        "names": {
+          "English": "Rosh Hashanah",
+          "Español": "Rosh Hashaná",
+          "Français": "Roch Hachana",
+          "Deutsch": "Rosch ha-Schana",
+          "Português": "Rosh Hashaná",
+          "العربية": "رأس السنة العبرية",
+          "日本語": "ロシュ・ハシャナ（ユダヤ暦の新年）",
+          "한국어": "로쉬 하샤나",
+          "中文": "犹太新年",
+          "हिंदी": "रोश हशनाह",
+          "Русский": "Рош ха-Шана",
+          "Türkçe": "Roş Aşana",
+          "Italiano": "Rosh haShanah"
+        }
+      },
+      {
+        "key": "sukkot",
+        "emoji": "🌿",
+        "names": {
+          "English": "Sukkot",
+          "Español": "Sucot",
+          "Français": "Souccot",
+          "Deutsch": "Sukkot (Laubhüttenfest)",
+          "Português": "Sucot",
+          "العربية": "عيد العُرُش (سوكوت)",
+          "日本語": "スコット（仮庵祭）",
+          "한국어": "초막절",
+          "中文": "住棚节",
+          "हिंदी": "सुक्कोत",
+          "Русский": "Суккот",
+          "Türkçe": "Sukot",
+          "Italiano": "Sukkot"
+        }
+      },
+      {
+        "key": "hanukkah",
+        "emoji": "🕎",
+        "names": {
+          "English": "the first day of Hanukkah",
+          "Español": "el primer día de Janucá",
+          "Français": "le premier jour de Hanoukka",
+          "Deutsch": "der erste Tag von Chanukka",
+          "Português": "o primeiro dia de Hanucá",
+          "العربية": "أول أيام عيد الأنوار (حانوكا)",
+          "日本語": "ハヌカの初日",
+          "한국어": "하누카 첫날",
+          "中文": "光明节第一天",
+          "हिंदी": "हनुक्का का पहला दिन",
+          "Русский": "первый день Хануки",
+          "Türkçe": "Hanuka'nın ilk günü",
+          "Italiano": "il primo giorno di Hanukkah"
+        }
+      }
+    ],
+    "Sikh": [
+      {
+        "key": "guru_gobind_singh",
+        "emoji": "✨",
+        "names": {
+          "English": "Guru Gobind Singh Gurpurab",
+          "Español": "Guru Gobind Singh Gurpurab",
+          "Français": "Guru Gobind Singh Gurpurab",
+          "Deutsch": "Guru Gobind Singh Gurpurab",
+          "Português": "Guru Gobind Singh Gurpurab",
+          "العربية": "ذكرى ميلاد غورو غوبيند سينغ",
+          "日本語": "グル・ゴービンド・シングの生誕祭",
+          "한국어": "구루 고빈드 싱 탄신일",
+          "中文": "古鲁·戈宾德·辛格诞辰",
+          "हिंदी": "गुरु गोबिंद सिंह जयंती (गुरपुरब)",
+          "Русский": "Гурпураб Гуру Гобинда Сингха",
+          "Türkçe": "Guru Gobind Singh Gurpurab",
+          "Italiano": "Guru Gobind Singh Gurpurab"
+        }
+      },
+      {
+        "key": "vaisakhi",
+        "emoji": "🌾",
+        "names": {
+          "English": "Vaisakhi",
+          "Español": "Vaisakhi",
+          "Français": "Vaisakhi",
+          "Deutsch": "Vaisakhi",
+          "Português": "Vaisakhi",
+          "العربية": "فايساخي",
+          "日本語": "ヴァイサーキー",
+          "한국어": "바이사키",
+          "中文": "丰收节（Vaisakhi）",
+          "हिंदी": "वैसाखी",
+          "Русский": "Вайсакхи",
+          "Türkçe": "Vaisakhi",
+          "Italiano": "Vaisakhi"
+        }
+      },
+      {
+        "key": "bandi_chhor",
+        "emoji": "🪔",
+        "names": {
+          "English": "Bandi Chhor Divas",
+          "Español": "Bandi Chhor Divas",
+          "Français": "Bandi Chhor Divas",
+          "Deutsch": "Bandi Chhor Divas",
+          "Português": "Bandi Chhor Divas",
+          "العربية": "باندي تشور ديفاس",
+          "日本語": "バンディ・チョール・ディワス",
+          "한국어": "반디 초르 디바스",
+          "中文": "解放日（Bandi Chhor Divas）",
+          "हिंदी": "बंदी छोड़ दिवस",
+          "Русский": "Банди Чхор Дивас",
+          "Türkçe": "Bandi Chhor Divas",
+          "Italiano": "Bandi Chhor Divas"
+        }
+      },
+      {
+        "key": "guru_nanak",
+        "emoji": "✨",
+        "names": {
+          "English": "Guru Nanak Gurpurab",
+          "Español": "Guru Nanak Gurpurab",
+          "Français": "Guru Nanak Gurpurab",
+          "Deutsch": "Guru Nanak Gurpurab",
+          "Português": "Guru Nanak Gurpurab",
+          "العربية": "ذكرى ميلاد غورو ناناك",
+          "日本語": "グル・ナーナクの生誕祭",
+          "한국어": "구루 나나크 탄신일",
+          "中文": "古鲁·那纳克诞辰",
+          "हिंदी": "गुरु नानक जयंती (गुरपुरब)",
+          "Русский": "Гурпураб Гуру Нанака",
+          "Türkçe": "Guru Nanak Gurpurab",
+          "Italiano": "Guru Nanak Gurpurab"
+        }
+      }
+    ]
+  }
+}
